@@ -38,4 +38,9 @@ public class CharacterManager : NetworkBehaviour
                 characterNetworkManager.networkRotationSmoothTime);
         }
     }
+
+    protected virtual private void LateUpdate()
+    {
+
+    }
 }
