@@ -5,6 +5,7 @@ using Unity.VisualScripting;
 public class CharacterManager : NetworkBehaviour
 {
     public CharacterController characterController;
+    [HideInInspector] public Animator animator;
     CharacterNetworkManager characterNetworkManager;
 
     protected virtual void Awake()
@@ -12,6 +13,7 @@ public class CharacterManager : NetworkBehaviour
         DontDestroyOnLoad(gameObject);
 
         characterController = GetComponent<CharacterController>();
+        animator = GetComponent<Animator>();
         characterNetworkManager = GetComponent<CharacterNetworkManager>();
     }
 
